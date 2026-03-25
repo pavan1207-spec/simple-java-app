@@ -19,7 +19,7 @@ spec:
  image: dockerhub-username/java-test-app:latest
  imagePullPolicy: Always
  ports:
- - containerPort: 8080
+ - containerPort: 8081
  resources:
  requests:
  memory: "256Mi"
@@ -29,12 +29,12 @@ spec:
  cpu: "500m"
  livenessProbe:
  tcpSocket:
- port: 8080
+ port: 8081
  initialDelaySeconds: 30
  periodSeconds: 10
  readinessProbe:
  tcpSocket:
- port: 8080
+ port: 8081
  initialDelaySeconds: 10
  periodSeconds: 5
 ---
@@ -49,5 +49,5 @@ spec:
  ports:
  - protocol: TCP
  port: 80
- targetPort: 8080
+ targetPort: 8081
  nodePort: 30007
