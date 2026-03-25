@@ -10,10 +10,10 @@ spec:
   template:
     metadata:
       labels:
-        app: java-app
+        app: simple-java-app
     spec:
       containers:
-      - name: java-app
+      - name: simple-java-app
       image: suryar07/java-test-app:latest
 ---
 apiVersion: v1
@@ -23,7 +23,7 @@ metadata:
 spec:
   type: NodePort
   selector:
-    app: java-app
+    app: simple-java-app
   ports:
     - port: 80
     targetPort: 8081
