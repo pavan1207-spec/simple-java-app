@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: simple-java-app
-          image: suryar07/java-test-app:latest
+          image: 23mis0563/java-test-app:latest
           ports:
             - containerPort: 8080
 
